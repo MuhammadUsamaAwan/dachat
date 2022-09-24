@@ -77,7 +77,7 @@ socket.on('user-joined', (username, date) => {
   <div class="flex items-baseline gap-2">
   <div class="text-base">${username}</div>
   <div class="text-light text-sm">Has Joined The Chat!</div>
-  <div class="text-light text-xs">${date}</div>
+  <div class="text-light text-xs">${moment(date).format('h:mm a')}</div>
   </div>
   </div>`
   chat.insertBefore(newMessage, typingText)
@@ -97,7 +97,7 @@ socket.on('user-left', (username, date) => {
     <div class="flex items-baseline gap-2">
       <div class="text-base">${username}</div>
       <div class="text-light text-sm">Has Left The Chat!</div>
-      <div class="text-light text-xs">${date}</div>
+      <div class="text-light text-xs">${moment(date).format('h:mm a')}</div>
     </div>
   </div>`
   chat.insertBefore(newMessage, typingText)
@@ -136,7 +136,7 @@ socket.on('receive-message', (username, date, message) => {
   <div class="flex-1">
     <div class="flex items-baseline gap-2">
       <div class="text-base">${username}</div>
-      <div class="text-light text-xs">${date}</div>
+      <div class="text-light text-xs">${moment(date).format('h:mm a')}</div>
     </div>
   <p>${message}</p>
   </div>`

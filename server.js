@@ -1,5 +1,4 @@
 const express = require('express')
-const moment = require('moment')
 const { joinUser, getRoomUsers, removeUser } = require('./utils/users')
 const app = express()
 const http = require('http')
@@ -15,7 +14,7 @@ io.on('connection', socket => {
   socket.on('join-room', (username, room) => {
     joinUser(socket.id, username, room)
     socket.join(room)
-    io.to(room).emit('user-joined', username, moment().format('h:mm a'))
+    io.to(room).emit('user-joined', username, new Date())
     io.to(room).emit('room-users', getRoomUsers(room))
   })
   // disconnect
@@ -25,9 +24,10 @@ io.on('connection', socket => {
       io.to(user.room).emit(
         'user-left',
         user.username,
-        moment().format('h:mm a')
+        new Date()
       )
       io.to(user.room).emit('room-users', getRoomUsers(user.room))
+      socket.broadcast.to(user.room).emit('typing-message-remove')
     }
   })
   // new messge
@@ -35,7 +35,7 @@ io.on('connection', socket => {
     io.to(room).emit(
       'receive-message',
       username,
-      moment().format('h:mm a'),
+      new Date(),
       message
     )
   })
