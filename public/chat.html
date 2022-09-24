@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="output.css" />
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="app.js" defer></script>
+    <title>Dachat - The Ultra Pro Max Chat App</title>
+  </head>
+  <body>
+    <main class="h-screen flex flex-col sm:flex-row">
+      <!-- sidebar -->
+      <aside class="bg-dark-4 sm:flex-1 flex-initial overflow-auto">
+        <!-- header -->
+        <div class="p-3 flex justify-between items-center box-shadow">
+          <h3 class="text-base font-semibold" id="room"></h3>
+          <button class="btn-danger px-2 py-0.5"><a href="/">Leave</a></button>
+        </div>
+        <!-- participants -->
+        <div class="sm:my-4 my-0">
+          <h4 class="text-light uppercase text-xs px-4 mb-2 sm:block hidden">
+            Participants
+          </h4>
+          <!-- participant -->
+          <ul id="participants" class="sm:block flex gap-2 overflow-auto"></ul>
+        </div>
+      </aside>
+      <!-- main -->
+      <section
+        class="sm:flex-[4] flex-1 px-4 flex flex-col justify-between overflow-auto">
+        <div class="space-y-4 overflow-auto mt-auto" id="chat">
+          <p
+            class="bg-dark-4 text-sm px-4 py-1 rounded hidden"
+            id="typing-text"></p>
+        </div>
+        <!-- new message form -->
+        <form class="my-2 relative" id="message-form">
+          <input
+            class="bg-bg-dark w-full text-base text-light px-4 py-2.5 outline-none rounded-sm"
+            placeholder="New Message"
+            autofocus
+            id="message"
+            autocomplete="off" />
+          <button
+            class="absolute top-1/2 -translate-y-1/2 right-4"
+            type="button"
+            id="emoji-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="24"
+              hight="24">
+              <g id="Face_Smile" data-name="Face Smile" fill="currentColor">
+                <g>
+                  <path
+                    d="M12,21.942A9.942,9.942,0,1,1,21.942,12,9.953,9.953,0,0,1,12,21.942ZM12,3.058A8.942,8.942,0,1,0,20.942,12,8.952,8.952,0,0,0,12,3.058Z" />
+                  <path
+                    d="M16.693,13.744a5.041,5.041,0,0,1-9.387,0c-.249-.59-1.111-.081-.863.505a6.026,6.026,0,0,0,11.114,0c.247-.586-.614-1.1-.864-.505Z" />
+                  <circle cx="9" cy="9.011" r="1.25" />
+                  <circle cx="15" cy="9.011" r="1.25" />
+                </g>
+              </g>
+            </svg>
+            <div class="absolute right-2 bottom-10 hidden" id="emoji-picker">
+              <emoji-picker class="dark"></emoji-picker>
+            </div>
+          </button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

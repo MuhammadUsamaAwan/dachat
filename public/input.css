@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-dark-2 text-white;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-hover outline-none rounded-sm;
+  }
+  .btn-danger {
+    @apply bg-red hover:bg-red-hover outline-none rounded-sm;
+  }
+  .box-shadow {
+    box-shadow: rgba(4, 4, 5, 0.2) 0 1px 0 0;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #282b30;
+  border-radius: 100vw;
+  margin-block: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e2124;
+  border-radius: 100vw;
+}
+
+@media only screen and (max-width: 640px) {
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+  emoji-picker {
+    width: calc(100vw - 5rem);
+    height: calc(100vh - 12rem);
+  }
+}
