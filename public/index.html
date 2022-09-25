@@ -1,53 +1,40 @@
-<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="output.css" />
-    <title>Dachat - Welcome! - The Ultra Pro Max Chat App</title>
-  </head>
-  <body>
-    <main class="grid place-content-center min-h-screen">
-      <form
-        class="bg-dark-3 p-10 rounded sm:w-[36rem] w-fit"
-        action="chat.html">
-        <h3 class="text-2xl font-bold text-center">Welcome To Dachat!</h3>
-        <h4 class="text-center text-light text-sm mb-4">
-          The Ultra Pro Max Chat App
-        </h4>
-        <div class="grid mb-4">
-          <label
-            for="username"
-            class="text-light uppercase text-xs mb-2 font-semibold">
-            Username
-          </label>
-          <input
-            id="username"
-            name="username"
-            class="h-10 px-2.5 bg-dark-5 outline-none rounded-sm"
-            autofocus
-            autocapitalize="words"
-            required />
-        </div>
-        <div class="grid mb-4">
-          <label
-            for="room"
-            class="text-light uppercase text-xs mb-2 font-semibold">
-            Room
-          </label>
-          <input
-            id="room"
-            name="room"
-            autocapitalize="words"
-            class="h-10 px-2.5 bg-dark-5 outline-none rounded-sm"
-            required />
-        </div>
-        <div class="grid">
-          <button class="btn-primary h-10">Join Room</button>
-        </div>
-      </form>
-    </main>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="output.css" />
+  <title>Dachat - Welcome! - The Ultra Pro Max Chat App</title>
+</head>
+
+<body>
+  <main class="grid place-content-center full-screen">
+    <form class="bg-dark-3 p-10 rounded sm:w-[36rem] w-fit" action="chat.html">
+      <h3 class="text-2xl font-bold text-center">Welcome To Dachat!</h3>
+      <h4 class="text-center text-light text-sm mb-4">
+        The Ultra Pro Max Chat App
+      </h4>
+      <div class="grid mb-4">
+        <label for="username" class="text-light uppercase text-xs mb-2 font-semibold">
+          Username
+        </label>
+        <input id="username" name="username" class="h-10 px-2.5 bg-dark-5 outline-none rounded-sm" autofocus
+          autocapitalize="words" required />
+      </div>
+      <div class="grid mb-4">
+        <label for="room" class="text-light uppercase text-xs mb-2 font-semibold">
+          Room
+        </label>
+        <input id="room" name="room" autocapitalize="words" class="h-10 px-2.5 bg-dark-5 outline-none rounded-sm"
+          required />
+      </div>
+      <div class="grid">
+        <button class="btn-primary h-10">Join Room</button>
+      </div>
+    </form>
+  </main>
+</body>
+
 </html>

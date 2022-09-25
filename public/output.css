@@ -600,8 +600,8 @@ body {
   top: 50%;
 }
 
-.right-14 {
-  right: 3.5rem;
+.right-\[calc\(44px\+0\.5rem\+1\.25rem\)\] {
+  right: calc(44px + 0.5rem + 1.25rem);
 }
 
 .right-2 {
@@ -610,10 +610,6 @@ body {
 
 .bottom-10 {
   bottom: 2.5rem;
-}
-
-.right-\[calc\(44px\+0\.5rem\+1\.25rem\)\] {
-  right: calc(44px + 0.5rem + 1.25rem);
 }
 
 .my-0 {
@@ -638,10 +634,6 @@ body {
   margin-bottom: 1rem;
 }
 
-.block {
-  display: block;
-}
-
 .flex {
   display: flex;
 }
@@ -660,10 +652,6 @@ body {
 
 .h-10 {
   height: 2.5rem;
-}
-
-.h-screen {
-  height: 100vh;
 }
 
 .min-h-screen {
@@ -759,10 +747,6 @@ body {
   border-radius: 0.125rem;
 }
 
-.rounded-lg {
-  border-radius: 0.5rem;
-}
-
 .bg-bg-dark {
   background-color: hsla(217,7.6%,33.5%,0.6);
 }
@@ -835,27 +819,8 @@ body {
   padding-right: 0.625rem;
 }
 
-.px-8 {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-.px-6 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-
-.px-5 {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-}
-
 .pl-5 {
   padding-left: 1.25rem;
-}
-
-.pr-\[calc\(1\.25rem\+24\+0\.25rem\)\] {
-  padding-right: calc(1.25rem + 24 + 0.25rem);
 }
 
 .pr-\[calc\(1\.25rem\+24px\+0\.25rem\)\] {
@@ -942,6 +907,12 @@ body {
   border-radius: 100vw;
 }
 
+.full-screen {
+  min-height: -moz-available;
+  min-height: -webkit-fill-available;
+  min-height: fill-available;
+}
+
 @media only screen and (max-width: 640px) {
   ::-webkit-scrollbar {
     width: 0;
@@ -972,10 +943,6 @@ body {
     display: block;
   }
 
-  .sm\:hidden {
-    display: none;
-  }
-
   .sm\:w-\[36rem\] {
     width: 36rem;
   }
@@ -990,9 +957,5 @@ body {
 
   .sm\:flex-row {
     flex-direction: row;
-  }
-
-  .sm\:rounded-sm {
-    border-radius: 0.125rem;
   }
 }

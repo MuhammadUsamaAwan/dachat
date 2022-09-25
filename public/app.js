@@ -116,6 +116,7 @@ messageForm.addEventListener('submit', e => {
     message.value = ''
   }
   socket.emit('user-typing-false', room)
+  document.getElementById('message').focus()
 })
 
 // play audio
