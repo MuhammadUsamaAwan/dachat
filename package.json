@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server",
-    "server": "nodemon server"
+    "server": "nodemon server",
+    "tailwind": "npx tailwind -i public/input.css -o public/output.css --watch"
   },
   "keywords": [],
   "author": "Muhammad Usama",
